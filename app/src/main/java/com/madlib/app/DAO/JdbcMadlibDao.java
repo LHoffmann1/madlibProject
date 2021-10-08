@@ -23,11 +23,11 @@ public class JdbcMadlibDao implements MadlibDao {
     }
 
     @Override
-    public Madlib getMadlib(String id) {
+    public Madlib getMadlib(String madlibId) {
         Madlib madlib = new Madlib();
         String sql = "SELECT madlib_string1, madlib_string2, madlib_string3, madlib_string4, madlib_string5, " +
                 "madlib_string6, madlib_string7 from madlibs WHERE madlib_id=?";
-        SqlRowSet results = jdbcTemplate.queryForRowSet(sql, id);
+        SqlRowSet results = jdbcTemplate.queryForRowSet(sql, madlibId);
 
         if(results.next()){
             String string1 = results.getString("madlib_string1");

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin
 @RestController
+@RequestMapping("/madlib")
 public class MadlibController {
 
 @Autowired
@@ -18,9 +19,9 @@ public class MadlibController {
 
 
 
-    @RequestMapping(path= "/madlib/id", method = RequestMethod.GET)
-        public Madlib getMadlib(){
-        return madlibDao.getMadlib(getMadlib().getMadLibId());
+    @GetMapping("/{id}")
+        public Madlib getMadlib(@PathVariable("id") String madlibId){
+        return madlibDao.getMadlib(madlibId);
     }
 
 

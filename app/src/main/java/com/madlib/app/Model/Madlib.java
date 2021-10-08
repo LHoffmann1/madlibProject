@@ -2,7 +2,7 @@ package com.madlib.app.Model;
 
 public class Madlib {
 
-    private String madLibId;
+    private String madlibId;
     private String madlibString1;
     private String madlibString2;
     private String madlibString3;
@@ -17,11 +17,11 @@ public class Madlib {
     }
 
     public String getMadLibId() {
-        return madLibId;
+        return madlibId;
     }
 
     public void setMadLibId(String madLibId) {
-        this.madLibId = madLibId;
+        this.madlibId = madLibId;
     }
 
     public String getMadlibString1() {

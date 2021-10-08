@@ -1,6 +1,6 @@
 <template>
 <div class="form" >
-    <form class="winter" v-on:submit.prevent>
+    <form class="winter" v-on:submit.prevent = "displayMadlib">
         <h2 id="form-directions">Fill in the parts of speech to <br> complete the Winter Madlib! </h2>
         <div class="form-group">
             <label for="input1">Plural Noun:</label>
@@ -39,18 +39,23 @@ export default {
     data(){
         return{
             madlib: {},
-            madlibID: 'winter'
+            madlibId: 'winter'
         }
     },
-    created() {
-            MadlibsService.getMadlib(this.madlibID).then(
-                (response) => {
-                    this.madlib = response.data;
-                }
-            )
-        },
+   
         methods:{
             displayMadlib(){
+                MadlibsService.getMadlib(this.madlibId).then(
+                    (response)=>{
+                        this.madlib= response.data;
+                    }
+                ).catch((error) => {
+                    if(error.response){
+                        window.alert("Bad Request");
+                    } else if (error.request){
+                        window.alert("Could Not Reach Service");
+                    }
+                })
                 
             }
         }

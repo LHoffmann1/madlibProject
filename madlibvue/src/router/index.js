@@ -5,7 +5,10 @@ import WinterView from '../views/WinterView.vue'
 
 Vue.use(VueRouter)
 
-const routes = [
+const router = new VueRouter({
+  mode: 'history',
+  base: process.env.BASE_URL,
+  routes:[
   {
     path: '/',
     name: 'MainView',
@@ -16,15 +19,9 @@ const routes = [
     name: 'WinterView',
     component: WinterView
   }
-
-
-
 ]
-
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
 })
+
+
 
 export default router
