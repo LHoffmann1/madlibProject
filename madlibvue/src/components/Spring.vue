@@ -143,10 +143,11 @@ form {
   margin-left: auto;
   margin-right: auto;
   border: 5px purple dashed;
-  width: 60vw;
+  width: 50vw;
   text-align: center;
   height: 675px;
-  font-family: "Patua One", cursive;
+  font-family: "Patua One";
+  padding-bottom: 30px;
 }
 
 div.form {
@@ -197,6 +198,8 @@ label {
   color: lightpink;
   background-color: purple;
   border: 2px solid purple;
+  margin-top: 30px;
+  
 }
 #complete-madlib{
     font-size: 28px;

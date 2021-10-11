@@ -66,7 +66,7 @@
           placeholder="Enter a noun"
         />
       </div>
-      <div class="form-group">
+      <div class="form-group" id="submit">
         <button type="submit" class="submit" id="submit-winter">
           Submit Words
         </button>
@@ -133,10 +133,11 @@ form {
   margin-left: auto;
   margin-right: auto;
   border: 5px white dashed;
-  width: 60vw;
+  width: 50vw;
   text-align: center;
   height: 600px;
-  font-family: "Patua One", cursive;
+  font-family: "Patua One";
+  padding-bottom: 30px;
 }
 
 div.form {
@@ -182,10 +183,13 @@ label {
   background-color: lightblue;
   color: white;
 }
+
 #submit-winter {
+  
   color: lightblue;
   background-color: white;
   border: 2px solid white;
+  margin-top:30px;
 }
 #complete-madlib{
     font-size: 28px;

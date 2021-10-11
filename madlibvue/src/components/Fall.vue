@@ -144,10 +144,11 @@ form {
   margin-left: auto;
   margin-right: auto;
   border: 5px brown dashed;
-  width: 60vw;
+  width: 50vw;
   text-align: center;
   height: 670px;
-  font-family: "Patua One", cursive;
+  font-family: "Patua One";
+  padding-bottom: 30px;
 }
 
 div.form {
@@ -181,7 +182,8 @@ div.form {
   border-radius: 25px;
   padding: 25px;
   font-size: 24px;
-  font-family: "Patua One", cursive;
+  font-family: "Patua One";
+  margin-top:30px;
 }
 
 

@@ -30,7 +30,7 @@ export default {};
   color: white;
   text-decoration: none;
   color: inherit;
-  font-size: 20px;
+  font-size: 30px;
   margin-left: 10px;
 }
 #logo-banner {
@@ -41,6 +41,6 @@ export default {};
   border-radius: 10px;
 }
 img{
-  border-bottom: double 10px rgb(32, 201, 201);
+  border-bottom: double 20px rgb(32, 201, 201);
 }
 </style>
