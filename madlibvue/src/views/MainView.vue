@@ -1,108 +1,141 @@
 <template>
   <div id="body">
-    <div class="container">
-      <div id="first-step">
-        <h2 id="directions">Choose Your Madlib Theme:</h2>
-        <div id="themes">
-          <nav>
-          <router-link
-            id="winterBtn"
-            v-bind:to="{ name: 'WinterView', params: { madlibId: madlib.id } }"
-            >Winter</router-link
-          >
-          <router-link
-            id="summerBtn"
-            v-bind:to="{ name: 'SummerView', params: { madlibId: madlib.id } }"
-            >Summer</router-link
-          >
-          <router-link
-            id="springBtn"
-            v-bind:to="{ name: 'SpringView', params: { madlibId: madlib.id } }"
-            >Spring</router-link
-          >
-          <router-link
-            id="fallBtn"
-            v-bind:to="{ name: 'FallView', params: { madlibId: madlib.id } }"
-            >Fall</router-link
-          ></nav>
-        </div>
+    <div id="first-step">
+      <h2 id="directions">Choose Your Madlib Theme:</h2>
+      <div id="themes">
+        <nav>
+          <div class="button" id="winter">
+            <router-link
+              id="winterBtn"
+              v-bind:to="{ name: 'WinterView', params: { madlibId: 'winter' } }"
+              >Winter</router-link
+            >
+          </div>
+          <div class="button" id="summer">
+            <router-link
+              id="summerBtn"
+              v-bind:to="{ name: 'SummerView', params: { madlibId: 'summer' } }"
+              >Summer</router-link
+            >
+          </div>
+          <div class="button" id="fall">
+            <router-link
+              id="fallBtn"
+              v-bind:to="{ name: 'FallView', params: { madlibId: 'fall' } }"
+              >Fall</router-link
+            ></div>
+            <div class="button" id="spring">
+              <router-link
+                id="springBtn"
+                v-bind:to="{
+                  name: 'SpringView',
+                  params: { madlibId: 'spring' },
+                }"
+                >Spring</router-link
+              >
+            </div>
+          
+        </nav>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-
-export default {
- 
-};
+export default {};
 </script>
 
 <style scoped>
 #body {
   background-color: teal;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Patua One', Arial, Helvetica, sans-serif;
   color: white;
+  
 }
-h2{
+#directions{
+  grid-area: title;
   color: white;
-  font-size:36px;
-}
-.container{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-    "grid2 grid2 grid2",
-    
-}
-#themes {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  grid-area: grid2;
-}
-#first-step {
-  grid-area: firstStep;
+  font-size: 45px;
   text-align: center;
-  margin-top: 5px;
+  padding-bottom: 30px;
+}
+#first-step{
+  padding-bottom:50px;
 }
 
-#directions {
-  margin-bottom: 50px;
-  font-size: 36px;
+.button {
+  font-size: 30px;
+  margin: 20px;
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 #winterBtn {
   grid-area: winterBtn;
   background-color: lightblue;
   color: white;
-  border-radius: 25px;
+  border-radius: 5px;
   border: 2px solid white;
+  padding: 30px;
+  display:inline-block;
+  width: 125px;
+  text-align: center;
+  text-decoration: none;
+  
+  
+  
+}
+#winter {
+  grid-area: winter;
 }
 #summerBtn {
   grid-area: summerBtn;
   background-color: yellow;
   color: magenta;
-  border-radius: 25px;
+  border-radius: 5px;
   border: 2px solid magenta;
+  padding: 30px;
+  display:inline-block;
+  width: 125px;
+  text-align: center;
+  text-decoration: none;
+  
+}
+#summer {
+  grid-area: summer;
 }
 #fallBtn {
-  grid-area: fallBtn;
   background-color: orange;
   color: brown;
-  border-radius: 25px;
+  border-radius: 5px;
   border: 2px solid brown;
+  padding: 30px;
+  display:inline-block;
+  width: 125px;
+  text-align: center;
+  text-decoration: none;
+  
+}
+#fall {
+  grid-area: fall;
 }
 #springBtn {
-  grid-area: springBtn;
   background-color: lightpink;
   color: purple;
-  border-radius: 25px;
+  border-radius: 5px;
   border: 2px solid purple;
+  padding: 30px;
+  display:inline-block;
+  width: 125px;
+  text-align: center;
+  text-decoration: none;
+  
 }
-nav > {
-  width: 150px;
-  height: 100px;
-  font-size: 20px;
+#spring {
+  grid-area: spring;
+  
 }
 </style>

@@ -1,12 +1,12 @@
 <template>
-  <winter/>
+  <spring/>
 
 </template>
 
 <script>
-import Winter from '../components/Winter.vue'
+import Spring from '../components/Spring.vue'
 export default {
-components:{Winter}
+components:{Spring}
 }
 </script>
 

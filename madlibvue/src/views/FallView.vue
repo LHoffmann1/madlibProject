@@ -1,12 +1,12 @@
 <template>
-  <winter/>
+  <fall/>
 
 </template>
 
 <script>
-import Winter from '../components/Winter.vue'
+import Fall from '../components/Fall.vue'
 export default {
-components:{Winter}
+components:{Fall}
 }
 </script>
 
